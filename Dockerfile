@@ -4,6 +4,8 @@ RUN apk update && apk add bash
 
 RUN mkdir -p /home/node/app && chown node:node /home/node/app
 
+USER node
+
 WORKDIR /home/node/app
 
 ARG PORT=3000
